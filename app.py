@@ -5,8 +5,6 @@ from flask import Flask, request, render_template
 from src.preprocessor import process
 from src.db import main
 import keras
-import warnings
-warnings.filterwarnings('ignore')
 
 app = Flask(__name__)
 

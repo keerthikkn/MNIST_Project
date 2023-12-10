@@ -50,7 +50,10 @@ Before running the web service, make sure you have the following installed:
 1. **Apply Kubernetes Configuration:**
 
     ```bash
-    kubectl apply -f kubernetes/deployment.yaml
+    kubectl apply -f kubernetes/deployment.yml
+    ```
+    ```bash
+    kubectl apply -f kubernetes/service.yml
     ```
 
 2. **Access the Web Service:**
@@ -59,6 +62,10 @@ Before running the web service, make sure you have the following installed:
 
     ```bash
     kubectl get services
+    ```
+    ```bash
+    ```bash
+    minikube service ml-webapp-service
     ```
 
     Open your web browser and navigate to [http://external-ip:5000](http://external-ip:5000).

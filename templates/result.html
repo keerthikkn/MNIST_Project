@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digit Classification Result</title>
+    <style>
+        body {
+            font-family: 'Roboto', 'Arial', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(to bottom right, #1a1a1a, #0d0d0d); 
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 30px;
+            color: #e6e6e6; 
+        }
+
+        p {
+            font-size: 2em;
+            margin-bottom: 25px;
+        }
+
+        #result {
+            font-size: 4em; 
+            margin-bottom: 20px;
+        }
+
+        a, button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 15px;
+            color: #ffcc00; 
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            text-transform: uppercase;
+            border-radius: 5px;
+            background-color: #1a1a1a; 
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover, button:hover {
+            text-decoration: underline;
+            background-color: #333333; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Digit Classification Result</h1>
+
+    <p>Prediction is</p>
+    <p id="result">{{ result }}</p>
+
+    <button onclick="location.href='/';">Upload Another Image</button>
+</body>
+</html>

@@ -8,6 +8,7 @@ This web service is built using Flask and utilizes a neural network model traine
 
 - **MNIST Digit Classification:** The web service is designed to classify handwritten digits using a pre-trained neural network model.
 - **Web Interface:** Users can upload JPEG images through a user-friendly web interface.
+- **MYSQL Connection:** Automatically stores the Predictions and Images uploaded to the web service. 
 - **Dockerized:** The application is containerized using Docker for easy deployment and scalability.
 - **Kubernetes Deployment:** The Dockerized application is deployed on Kubernetes for efficient management and scaling.
 
@@ -26,20 +27,21 @@ Before running the web service, make sure you have the following installed:
     git clone https://github.com/keerthikkn/MNIST_Project.git
     cd MNIST_Project
     ```
+2.**Go to "src/db.py" and update the MYSQL Connection credentials**
 
-2. **Build Docker Image:**
+3. **Build Docker Image:**
 
     ```bash
     docker build -t mnist-digit-classification:latest .
     ```
 
-3. **Run Docker Container:**
+4. **Run Docker Container:**
 
     ```bash
     docker run -p 5000:5000 mnist-digit-classification
     ```
 
-4. **Access the Web Interface:**
+5. **Access the Web Interface:**
 
     Open your web browser and navigate to [http://localhost:5000](http://localhost:5000).
 
@@ -69,8 +71,10 @@ Before running the web service, make sure you have the following installed:
     - Click the "Choose File" button to upload a JPEG image of a handwritten digit.
 
 2. **View Prediction:**
-
+    - Click the upload button.
     - After uploading, the web service will display the predicted digit class.
+    - And stores the uploaded image and prediction in the provided MYSQL database
+
 
 ## Contributing
 
@@ -87,4 +91,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-For any inquiries or support, please contact [your-email@example.com](mailto:keerthikkn2000@gmail.com).
+For any inquiries or support, please contact [keerthikkn2000@gmail.com](mailto:keerthikkn2000@gmail.com).

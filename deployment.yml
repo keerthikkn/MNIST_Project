@@ -1,21 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mnist-app
-  labels:
-    app: newapp
+  name: ml-webapp
 spec:
-  replicas: 2
+  replicas: 3 
   selector:
     matchLabels:
-      app: newapp
+      app: ml-webapp
   template:
     metadata:
       labels:
-        app: newapp 
+        app: ml-webapp
     spec:
       containers:
-      - name: appserver
-        image: keerthi2000/newapp:v1
+      - name: ml-webapp
+        image: keerthi2000/mnist:latest  
         ports:
-        - containerPort: 8080
+        - containerPort: 5000  
+        resources:
+          limits:
+            memory: "512Mi"  # Adjust memory limits as needed
+            cpu: "0.5"       # Adjust CPU limits as needed
+          requests:
+            memory: "256Mi"  # Adjust memory requests as needed
+            cpu: "0.25"      # Adjust CPU requests as needed

@@ -27,7 +27,7 @@ Before running the web service, make sure you have the following installed:
     git clone https://github.com/keerthikkn/MNIST_Project.git
     cd MNIST_Project
     ```
-2.**Go to "src/db.py" and update the MYSQL Connection credentials**
+2. **Go to "src/db.py" and update the MYSQL Connection credentials**
 
 3. **Build Docker Image:**
 

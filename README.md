@@ -64,7 +64,6 @@ Before running the web service, make sure you have the following installed:
     kubectl get services
     ```
     ```bash
-    ```bash
     minikube service ml-webapp-service
     ```
 

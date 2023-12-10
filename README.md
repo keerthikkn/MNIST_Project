@@ -69,11 +69,12 @@ Before running the web service, make sure you have the following installed:
 
     - Navigate to the web interface.
     - Click the "Choose File" button to upload a JPEG image of a handwritten digit.
+    - Image samples are provided in "sample_images" directory, feel free to use them or provide from external source in JPG format (preferred), The model processes it automatically
 
 2. **View Prediction:**
     - Click the upload button.
     - After uploading, the web service will display the predicted digit class.
-    - And stores the uploaded image and prediction in the provided MYSQL database
+    - And stores the uploaded image and prediction in the provided MYSQL database (stores Images as BLOB).
 
 
 ## Contributing

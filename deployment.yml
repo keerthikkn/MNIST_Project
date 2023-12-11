@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ml-webapp
+spec:
+  replicas: 3 
+  selector:
+    matchLabels:
+      app: ml-webapp
+  template:
+    metadata:
+      labels:
+        app: ml-webapp
+    spec:
+      containers:
+      - name: ml-webapp
+        image: keerthi2000/mnist-digit-classificationdocker :latest  
+        ports:
+        - containerPort: 5000  
+        resources:
+          limits:
+            memory: "512Mi"  # Adjust memory limits as needed
+            cpu: "0.5"       # Adjust CPU limits as needed
+          requests:
+            memory: "256Mi"  # Adjust memory requests as needed
+            cpu: "0.25"      # Adjust CPU requests as needed
